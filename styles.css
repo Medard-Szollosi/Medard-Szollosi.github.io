@@ -26,6 +26,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
 }
 
 /* Footer styling */
@@ -33,19 +34,24 @@ footer {
     background-color: #000000;
     color: white;
     text-align: center;
-    height: 60px;
+    height: 100px;
     line-height: 60px;
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
 }
-
 /* Ensure content is pushed below the fixed header */
 main {
     flex: 1; /* Pushes footer to bottom */
-    padding: 80px 20px; /* Ensures text is not hidden under header */
+    padding-top: 100px; /* Set padding to match header height */
+    padding-left: 20px; /* Optional: Adjust left padding */
+    padding-right: 20px; /* Optional: Adjust right padding */
+    min-height: calc(100vh - 120px); /* Ensure content area fills available space between header and footer */
+    box-sizing: border-box; /* Ensure padding doesn't cause layout shifts */
 }
+
+
 /* Style the navigation bar */
 nav {
     text-align: center;
@@ -59,7 +65,8 @@ nav a {
     padding: 10px 20px;
     display: inline-block;
 }
-
-nav a:hover {
-    background-color: #000000;
+h1, h2 {
+    font-size: 2em; /* You can adjust this size to your preference */
+    margin: 0;
+    padding: 0;
 }
