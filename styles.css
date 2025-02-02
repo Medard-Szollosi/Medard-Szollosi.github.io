@@ -1,36 +1,48 @@
 body {
     background-color:  #003366; /* tummansininen */
   }
-  /* Reset default margin & padding */
+ /* Reset default margin & padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Make the body take full height */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Header styling */
 header {
-    background-color: #333;  /* Dark background */
-    color: white;            /* White text */
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 10px 0;
-    height: 60px;            /* Set height to 60px */
-    line-height: 60px;       /* Center text vertically */
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 /* Footer styling */
 footer {
-    background-color: #333;  /* Same as header */
+    background-color: #333;
     color: white;
     text-align: center;
-    height: 60px;            /* Set height to 60px */
-    line-height: 60px;       /* Center text vertically */
-    position: fixed;         /* Stick to bottom */
+    height: 60px;
+    line-height: 60px;
     width: 100%;
+    position: fixed;
     bottom: 0;
+    left: 0;
 }
 
-/* Ensure the main content has some space */
+/* Ensure content is pushed below the fixed header */
 main {
-    padding: 80px 20px; /* Add padding so text isn't hidden under header */
+    flex: 1; /* Pushes footer to bottom */
+    padding: 80px 20px; /* Ensures text is not hidden under header */
 }
