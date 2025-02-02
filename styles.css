@@ -46,3 +46,20 @@ main {
     flex: 1; /* Pushes footer to bottom */
     padding: 80px 20px; /* Ensures text is not hidden under header */
 }
+/* Style the navigation bar */
+nav {
+    text-align: center;
+    background-color: #444;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #555;
+}
