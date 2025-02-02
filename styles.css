@@ -1,4 +1,36 @@
 body {
     background-color:  #003366; /* tummansininen */
   }
-  
+  /* Reset default margin & padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+    background-color: #333;  /* Dark background */
+    color: white;            /* White text */
+    text-align: center;
+    padding: 10px 0;
+    height: 60px;            /* Set height to 60px */
+    line-height: 60px;       /* Center text vertically */
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;  /* Same as header */
+    color: white;
+    text-align: center;
+    height: 60px;            /* Set height to 60px */
+    line-height: 60px;       /* Center text vertically */
+    position: fixed;         /* Stick to bottom */
+    width: 100%;
+    bottom: 0;
+}
+
+/* Ensure the main content has some space */
+main {
+    padding: 80px 20px; /* Add padding so text isn't hidden under header */
+}
