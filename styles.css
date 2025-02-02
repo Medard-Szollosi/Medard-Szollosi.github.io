@@ -49,7 +49,7 @@ main {
 /* Style the navigation bar */
 nav {
     text-align: center;
-    background-color: #444;
+    background-color: #000000;
     padding: 10px 0;
 }
 
@@ -61,5 +61,5 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: #000000;
 }
