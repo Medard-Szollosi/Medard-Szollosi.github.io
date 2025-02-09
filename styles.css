@@ -135,7 +135,10 @@ h1, h2, h3 {
     background-color: #004182; /* Darker LinkedIn blue on hover */
 }
 
+/* Increase the size of the LinkedIn logo */
 #linkedinLogo {
-    width: 24px; /* Adjust logo size */
-    margin-right: 8px; /* Space between logo and text */
+    width: 30px; /* Adjust to a larger size */
+    height: auto; /* Keep the aspect ratio */
+    margin-right: 10px; /* Space between the logo and text */
 }
+
