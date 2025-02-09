@@ -19,40 +19,61 @@ html, body {
 header {
     background-color: #000000;
     color: white;
-    padding: 20px 0; /* Add some padding to give space around header */
+    padding: 20px 0; /* Space inside the header */
     width: 100%;
+    position: fixed; /* Fix the header to the top */
+    top: 0; /* Align to the top of the viewport */
+    left: 0;
+    z-index: 1000; /* Ensure it's on top of other content */
+    height: 80px; /* Set a specific height for the header */
 }
 
-.header-content {
-    display: flex;               /* Activate flexbox */
-    justify-content: space-between; /* Distribute space between items */
-    align-items: center;         /* Vertically center the content */
-    max-width: 1200px;           /* Optional: limit width of header content */
-    margin: 0 auto;              /* Center the header content horizontally */
-    padding: 0 20px;             /* Add padding on the left and right */
-}
-
-#logo {
-    width: 50px; /* Adjust logo size */
-    height: auto;
-}
-
+/* Navigation styling */
 nav {
-    display: flex;               /* Make the nav links display in a row */
+    display: flex; /* Activate flexbox on the nav */
+    justify-content: center; /* Centers the links horizontally */
+    align-items: center; /* Centers the links vertically */
+    gap: 20px; /* Space between links */
+    margin-bottom: 20px; /* Add space below the navigation links */
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    margin-left: 20px;            /* Add space between links */
     font-size: 16px;
+    padding: 10px 20px;
     transition: background-color 0.3s;
 }
 
 nav a:hover {
-    background-color: #444;      /* Change background color when hovering */
+    background-color: #444; /* Change background color when hovering */
 }
+
+/* Adjust main content to not overlap with the fixed header */
+main {
+    padding: 20px; /* Space inside main content */
+    padding-top: 100px; /* Add padding to the top to prevent overlap */
+}
+
+/* Mobile responsiveness (optional) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        align-items: flex-start; /* Align links to the left */
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 10px 0;
+    }
+
+    main {
+        padding-top: 120px; /* Increase padding-top for mobile */
+    }
+}
+
+
+
 
 /* Footer styling */
 footer {
