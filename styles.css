@@ -47,6 +47,7 @@ main {
     padding-top: 100px; /* Set padding to match header height */
     padding-left: 20px; /* Optional: Adjust left padding */
     padding-right: 20px; /* Optional: Adjust right padding */
+    padding-bottom: 120px; /* Adjust this value based on footer height */
     min-height: calc(100vh - 120px); /* Ensure content area fills available space between header and footer */
     box-sizing: border-box; /* Ensure padding doesn't cause layout shifts */
     color: white; /* Set text color to white */
