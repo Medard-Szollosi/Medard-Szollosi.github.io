@@ -21,7 +21,7 @@ header {
     color: white;
     text-align: center;
     height: 20px;
-    line-height: 60px;
+    line-height: 20px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -34,7 +34,7 @@ footer {
     background-color: #000000;
     color: white;
     text-align: center;
-    height: 100px;
+    height: 60px;
     line-height: 20px;
     width: 100%;
     position: fixed;
@@ -44,7 +44,7 @@ footer {
 /* Ensure content is pushed below the fixed header */
 main {
     flex: 1; /* Pushes footer to bottom */
-    padding-top: 200px; /* Set padding to match header height */
+    padding-top: 100px; /* Set padding to match header height */
     padding-left: 20px; /* Optional: Adjust left padding */
     padding-right: 20px; /* Optional: Adjust right padding */
     min-height: calc(100vh - 120px); /* Ensure content area fills available space between header and footer */
@@ -100,7 +100,7 @@ h1, h2, h3 {
     width: 80%;
     max-width: 600px;
     background: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     color: black;
 }
