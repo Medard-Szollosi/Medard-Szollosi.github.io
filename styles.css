@@ -71,22 +71,6 @@ main {
         padding-top: 120px; /* Increase padding-top for mobile */
     }
 }
-
-
-
-
-/* Footer styling */
-footer {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    height: 60px;
-    line-height: 20px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
 /* Ensure content is pushed below the fixed header */
 main {
     flex: 1; /* Pushes footer to bottom */
@@ -99,7 +83,18 @@ main {
     color: white; /* Set text color to white */
 }
 
-
+/* Footer styling */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    height: 60px;
+    line-height: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;    
+    left: 0;
+}
 /* Style the navigation bar */
 nav {
     text-align: center;
@@ -143,14 +138,15 @@ h1, h2, h3 {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     text-align: left;
-    margin: 20px auto;
+    margin: 80px auto; /* Push it further down */
     width: 80%;
     max-width: 100px;
     background: white;
-    padding: 10px;
+    padding: 100px;
     border-radius: 10px;
     color: black;
 }
+
 
 /* Back Button */
 #backButton {
