@@ -81,6 +81,7 @@ main {
     width: 200px;
     height: auto;
     border-radius: 50%;
+    display: none; /* Initially hidden until overlay is clicked */
 }
 
 #overlay {
