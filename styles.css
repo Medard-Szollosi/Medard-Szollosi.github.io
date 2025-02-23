@@ -74,14 +74,13 @@ main {
 #photo-container {
     position: relative;
     display: inline-block;
-    cursor: pointer; /* Indicates it's clickable */
+    cursor: pointer; /* Makes it clear it's clickable */
 }
 
 #profile-pic {
     width: 200px;
     height: auto;
     border-radius: 50%;
-    display: none; /* Hidden until overlay disappears */
 }
 
 #overlay {
