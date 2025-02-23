@@ -5,13 +5,14 @@
     box-sizing: border-box;
 }
 
-/* Background Color */
+/* Correct Background Color */
 body {
     font-family: Arial, sans-serif;
-    background-color: #003366;
+    background-color: #003366;  /* Dark blue as requested */
     color: white;
     text-align: center;
     line-height: 1.6;
+    position: relative;
 }
 
 /* Header & Footer */
@@ -24,75 +25,56 @@ header, footer {
     justify-content: space-between;
     padding: 0 15px;
     font-size: 18px;
-    position: relative;
 }
 
-/* LinkedIn button */
+/* LinkedIn button in footer */
 footer a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Hamburger Menu */
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-    display: block;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-}
-
-/* Navbar */
-.navbar {
+/* Profile Image */
+#profile-container {
     position: relative;
+    display: inline-block;
+    margin-top: 20px;
 }
 
-/* Hide menu by default on mobile */
-.navbar ul {
-    display: none;
-    list-style: none;
+#profile-image {
+    width: 80%;
+    max-width: 200px;  /* Keeps the image small */
+    height: auto;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Word overlay on profile image */
+.text-overlay {
     position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: black;
-    flex-direction: column;
-    text-align: center;
-}
-
-/* When active, show the menu */
-.navbar ul.active {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Styling for menu items */
-.navbar ul li {
-    padding: 10px;
+.text-overlay .tag {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* On larger screens, always show the menu */
-@media screen and (min-width: 768px) {
-    .navbar ul {
-        display: flex !important;
-        flex-direction: row;
-        position: static;
-        width: auto;
-    }
-
-    .menu-icon {
-        display: none;
-    }
-
-    .navbar ul li {
-        margin: 0 15px;
-    }
+/* CV container - Hidden by default */
+#cv-container {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    margin: 20px auto;
 }
