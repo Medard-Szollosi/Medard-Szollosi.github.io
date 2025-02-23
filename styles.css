@@ -5,10 +5,10 @@
     box-sizing: border-box;
 }
 
-/* Background color fix */
+/* Correct Background Color */
 body {
     font-family: Arial, sans-serif;
-    background-color: 00336;  /* Dark blue as requested */
+    background-color: #003366;  /* Dark blue as requested */
     color: white;
     text-align: center;
     line-height: 1.6;
@@ -37,8 +37,18 @@ footer a {
 .navbar {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
+/* Hamburger Menu */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+    color: white;
+}
+
+/* Nav links */
 .navbar ul {
     display: none;  /* Initially hidden on mobile */
     list-style: none;
@@ -65,17 +75,10 @@ footer a {
     font-size: 18px;
 }
 
-/* Hamburger Menu */
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    display: block;  /* Ensure it shows up */
-}
-
 /* Make sure nav is always visible on larger screens */
 @media screen and (min-width: 768px) {
     .navbar ul {
-        display: flex;
+        display: flex !important;
         flex-direction: row;
         position: static;
         width: auto;
@@ -89,3 +92,17 @@ footer a {
         margin: 0 15px;
     }
 }
+
+/* Profile Image */
+#profile-image {
+    width: 80%;
+    max-width: 200px;  /* Adjusted for proper sizing */
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Word overlay on profile image */
+.text-overlay {
+    position: 
