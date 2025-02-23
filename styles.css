@@ -1,118 +1,91 @@
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Background color fix */
 body {
     font-family: Arial, sans-serif;
-    background-color: #00336;
+    background-color: 00336;  /* Dark blue as requested */
     color: white;
+    text-align: center;
     line-height: 1.6;
 }
 
+/* Header & Footer */
 header, footer {
     background-color: black;
     color: white;
-    padding: 20px;
-    text-align: center;
+    height: 60px;  /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    font-size: 18px;
 }
 
+/* LinkedIn button in footer */
 footer a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
-nav ul {
+/* Navigation styles */
+.navbar {
     display: flex;
-    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    display: none;  /* Initially hidden on mobile */
     list-style: none;
+    flex-direction: column;
+    background: black;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }
 
-nav ul li {
-    margin: 0 10px;
+.navbar ul.active {
+    display: flex;
 }
 
-nav ul li a {
+.navbar ul li {
+    padding: 10px;
+}
+
+.navbar ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 
+/* Hamburger Menu */
 .menu-icon {
     font-size: 30px;
-    display: none;
     cursor: pointer;
+    display: block;  /* Ensure it shows up */
 }
 
-.main-content {
-    text-align: center;
-    padding: 20px;
-}
-
-.text-overlay {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    right: 10%;
-    text-align: center;
-}
-
-.text-overlay .tag {
-    margin: 5px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    cursor: pointer;
-}
-
-#cv-container {
-    display: none;
-}
-
-.portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.portfolio-item {
-    width: 100px;
-    text-align: center;
-}
-
-.text {
-    display: none;
-}
-
-.comments {
-    margin-top: 20px;
-}
-
-textarea {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 10px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #555;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
+/* Make sure nav is always visible on larger screens */
 @media screen and (min-width: 768px) {
     .navbar ul {
-        display: block;
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
     }
 
     .menu-icon {
         display: none;
     }
 
-    .portfolio-item {
-        width: 200px;
+    .navbar ul li {
+        margin: 0 15px;
     }
 }
