@@ -32,3 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+function toggleFlip(id) {
+    const container = document.getElementById(id + '-container');
+    container.classList.toggle('flipped');
+}

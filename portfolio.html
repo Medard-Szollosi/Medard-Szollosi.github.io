@@ -17,34 +17,77 @@
                 </svg>
             </a>
         </div>
-        <div class="center-header">
-            <!-- Your Logo (if any) or other content -->
-        </div>
-        <div class="right-header">
-            <!-- Any additional items if needed -->
-        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div> 
+
+        <nav id="menu"> 
+
+            <a href="work.html">Työkokemus
+
+            <a href="portfolio.html">Portfolio</a> 
+        </nav> 
+
     </header>
 
     <main>
         <div class="portfolio">
             <div class="portfolio-item" onclick="toggleFlip('ios')">
-                <img src="ios.png" alt="iOS" id="ios">
-                <div class="text" id="ios-text">mobiililaiteasennukset</div>
+                <div class="flip-container" id="ios-container">
+                    <div class="flip">
+                        <div class="front">
+                            <img src="ios.png" alt="iOS" class="portfolio-img">
+                        </div>
+                        <div class="back">
+                            <p>Hello, I am Medard</p> <!-- Text on the back -->
+                        </div>
+                    </div>
+                </div>
+                <div class="text">mobiililaiteasennukset</div> <!-- Text on the front -->
             </div>
+    
             <div class="portfolio-item" onclick="toggleFlip('laptop')">
-                <img src="laptop.png" alt="Laptop" id="laptop">
-                <div class="text" id="laptop-text">tietokoneasennukset</div>
+                <div class="flip-container" id="laptop-container">
+                    <div class="flip">
+                        <div class="front">
+                            <img src="laptop.png" alt="Laptop" class="portfolio-img">
+                        </div>
+                        <div class="back">
+                            <p>Hello, I am Medard</p> <!-- Text on the back -->
+                        </div>
+                    </div>
+                </div>
+                <div class="text">mobiililaiteasennukset</div> <!-- Text on the front -->
             </div>
+    
             <div class="portfolio-item" onclick="toggleFlip('palomuuri')">
-                <img src="palomuuri.png" alt="Firewall" id="palomuuri">
-                <div class="text" id="palomuuri-text">palomuuriasennukset</div>
+                <div class="flip-container" id="palomuuri-container">
+                    <div class="flip">
+                        <div class="front">
+                            <img src="palomuuri.png" alt="Firewall" class="portfolio-img">
+                        </div>
+                        <div class="back">
+                            <p>Hello, I am Medard</p> <!-- Text on the back -->
+                        </div>
+                    </div>
+                </div>
+                <div class="text">mobiililaiteasennukset</div> <!-- Text on the front -->
             </div>
+    
             <div class="portfolio-item" onclick="toggleFlip('server')">
-                <img src="server.png" alt="Server" id="server">
-                <div class="text" id="server-text">palveelinasennukset</div>
+                <div class="flip-container" id="server-container">
+                    <div class="flip">
+                        <div class="front">
+                            <img src="server.png" alt="Server" class="portfolio-img">
+                        </div>
+                        <div class="back">
+                            <p>Hello, I am Medard</p> <!-- Text on the back -->
+                        </div>
+                    </div>
+                </div>
+                <div class="text">mobiililaiteasennukset</div> <!-- Text on the front -->
             </div>
         </div>
     </main>
+    
 
     <footer> 
 

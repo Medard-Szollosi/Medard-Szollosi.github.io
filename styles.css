@@ -332,7 +332,7 @@ footer a:hover {
 /* Portfolio container */
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Default 2 items per row on medium screens */
+    grid-template-columns: repeat(2, 1fr); /* Two items per row on wider screens */
     gap: 20px; /* Space between items */
     padding: 20px;
     justify-items: center; /* Center items horizontally */
@@ -343,29 +343,74 @@ footer a:hover {
 .portfolio-item {
     position: relative;
     width: 100%;
-    max-width: 100%; /* Make sure they fill the available space */
-    height: 200px; /* Set a fixed height for uniformity */
-    overflow: hidden; /* Hide any overflow if the content doesn't fit */
+    height: 200px; /* Set a fixed height for each portfolio item */
+    overflow: hidden;
     cursor: pointer;
-    border-radius: 10px; /* Optional: rounded corners for better visuals */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect on hover */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.portfolio-item:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+/* Image inside portfolio item */
+.portfolio-img {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: contain; /* Ensure full image is visible, no cropping */
+    object-position: center; /* Center the image */
 }
 
-/* Image within portfolio item */
-.portfolio-item img {
+/* Container for the flip effect */
+.flip-container {
+    perspective: 1000px; /* Add perspective for 3D effect */
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure images cover the entire box */
-    border-radius: 10px; /* Optional: round the corners of the images */
 }
 
-/* Text overlay on images */
+/* Flip animation */
+.flip {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Front face of the card (the image) */
+.flip .front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back when flipped */
+}
+
+/* Back face of the card (the text) */
+.flip .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #003366;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    backface-visibility: hidden; /* Hide the back face */
+    transform: rotateY(180deg); /* Hide the back by default */
+}
+
+/* Flip the card when clicked */
+.flip-container.flipped .flip {
+    transform: rotateY(180deg); /* Flip the card */
+}
+
+/* Text on the front of the card */
 .text {
     position: absolute;
     bottom: 10px;
@@ -378,51 +423,41 @@ footer a:hover {
     border-radius: 5px;
 }
 
-/* Responsive Design */
+/* Responsive design for small screens */
 @media (max-width: 767px) {
-    /* On mobile devices, make it one column layout */
     .portfolio {
-        grid-template-columns: 1fr; /* Stack the items vertically */
+        grid-template-columns: 1fr; /* One item per row on small screens */
     }
 
     .portfolio-item {
-        height: 250px; /* Increase the height on mobile for better visibility */
+        height: 250px; /* Make the items a bit bigger on mobile */
+    }
+
+    .portfolio-img {
+        height: 100%; /* Ensure image takes the full height of the container */
     }
 }
 
+/* On larger screens (e.g., desktops), we can show 2 items per row */
 @media (min-width: 768px) {
-    /* On larger devices, make two items side by side */
     .portfolio {
         grid-template-columns: repeat(2, 1fr); /* Two items per row */
+        gap: 30px; /* Increase gap between items */
     }
 
     .portfolio-item {
-        height: 300px; /* Set a larger height on bigger screens */
+        height: 300px; /* Increase item height for larger screens */
+    }
+
+    .portfolio-img {
+        object-fit: contain; /* Ensure full image is visible, no cropping */
     }
 }
 
-@media (min-width: 1024px) {
-    /* For even larger screens (like desktops), make it three items per row */
-    .portfolio {
-        grid-template-columns: repeat(3, 1fr); /* Three items per row */
-        gap: 30px; /* Increase the gap for better spacing */
-        padding: 40px; /* More padding around the grid */
-    }
-
-    .portfolio-item {
-        height: 350px; /* Increase the height for a more balanced look on large screens */
-    }
-}
-
+/* For very large screens (e.g., large desktop monitors), we can add some margin for spacing */
 @media (min-width: 1200px) {
-    /* For extra-wide screens (large desktop monitors), make four items per row */
     .portfolio {
-        grid-template-columns: repeat(4, 1fr); /* Four items per row */
-        gap: 40px; /* More space between the items */
-        padding: 50px; /* More padding around the grid */
-    }
-
-    .portfolio-item {
-        height: 400px; /* Adjust the height for a more consistent look */
+        grid-template-columns: repeat(2, 1fr); /* Maintain two items per row */
+        gap: 40px; /* Even bigger gap */
     }
 }
