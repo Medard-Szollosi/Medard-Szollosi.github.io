@@ -81,7 +81,7 @@ main {
     width: 200px;
     height: auto;
     border-radius: 50%;
-    display: none; /* Initially hidden until overlay is clicked */
+    display: none; /* Hidden until overlay disappears */
 }
 
 #overlay {
@@ -111,4 +111,3 @@ main {
     opacity: 0;
     pointer-events: none; /* Prevents interaction after fading out */
 }
-
