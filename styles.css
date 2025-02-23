@@ -71,6 +71,7 @@ main {
 .linkedin-btn:hover {
     background: gray;
 }
+
 #photo-container {
     position: relative;
     display: inline-block;

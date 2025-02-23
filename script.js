@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.addEventListener("click", () => {
             if (!overlayClicked) {
                 // First click: Hide the overlay, reveal the picture
-                overlay.classList.add("hidden");
-                profilePic.classList.remove("hidden");
+                overlay.classList.add("hidden"); // Hide the overlay
+                profilePic.classList.remove("hidden"); // Show the profile picture
                 overlayClicked = true; // Mark that overlay has been clicked
             }
         });
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Handle the second click (on the picture itself)
         profilePic.addEventListener("click", () => {
             if (overlayClicked) {
-                // Second click: Hide the picture and show the CV
+                // Second click: Hide the picture and show CV
                 profilePic.classList.add("hidden");
                 setTimeout(() => {
                     photoContainer.style.display = "none"; // Hide container
@@ -34,3 +34,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
