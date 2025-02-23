@@ -5,14 +5,13 @@
     box-sizing: border-box;
 }
 
-/* Correct Background Color */
+/* Background Color */
 body {
     font-family: Arial, sans-serif;
-    background-color: #003366;  /* Dark blue as requested */
+    background-color: #003366;
     color: white;
     text-align: center;
     line-height: 1.6;
-    position: relative;
 }
 
 /* Header & Footer */
@@ -27,29 +26,88 @@ header, footer {
     font-size: 18px;
 }
 
-/* LinkedIn button in footer */
+/* LinkedIn button */
 footer a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Profile Image */
+/* Hamburger Menu */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    display: block;
+}
+
+/* Navbar */
+.navbar {
+    position: relative;
+}
+
+.navbar ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: black;
+    flex-direction: column;
+    text-align: center;
+}
+
+.navbar ul.active {
+    display: flex;
+}
+
+.navbar ul li {
+    padding: 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* On larger screens, show the menu */
+@media screen and (min-width: 768px) {
+    .navbar ul {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        width: auto;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .navbar ul li {
+        margin: 0 15px;
+    }
+}
+
+/* Profile Image Section */
 #profile-container {
     position: relative;
     display: inline-block;
     margin-top: 20px;
 }
 
+/* Profile Image - Hidden until words disappear */
 #profile-image {
     width: 80%;
-    max-width: 200px;  /* Keeps the image small */
+    max-width: 200px;
     height: auto;
     border-radius: 50%;
     cursor: pointer;
+    pointer-events: none;  /* Prevent clicking before words disappear */
 }
 
-/* Word overlay on profile image */
+/* Text Overlay on Profile Image */
 .text-overlay {
     position: absolute;
     top: 50%;
@@ -70,7 +128,7 @@ footer a {
     border-radius: 5px;
 }
 
-/* CV container - Hidden by default */
+/* CV Container - Hidden by default */
 #cv-container {
     display: none;
     width: 100%;
