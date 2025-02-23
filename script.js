@@ -1,27 +1,34 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const profileImage = document.getElementById("profile-image");
-    const cvContainer = document.getElementById("cv-container");
-    const textOverlay = document.querySelector(".text-overlay");
+function toggleMenu() {
+    const menu = document.getElementById("menu"); 
+    menu.classList.toggle("active");
+    if (menu.classList.contains("active")) {
+        menu.style.display = "block";  // Make sure the menu shows
+    } else {
+        menu.style.display = "none";  // Hide menu when toggled off
+    }
+}
 
-    // Hide text when clicked
-    document.querySelectorAll('.tag').forEach(tag => {
-        tag.addEventListener("click", function () {
-            tag.style.display = 'none';
+document.addEventListener("DOMContentLoaded", () => {
 
-            // Check if all words are gone
-            if (document.querySelectorAll('.tag[style="display: none;"]').length === 3) {
-                textOverlay.style.display = 'none';
-            }
+    const photoContainer = document.getElementById("photo-container");
+    const profilePic = document.getElementById("profile-pic");
+    const overlay = document.getElementById("overlay");
+    const cv = document.getElementById("cv");
+
+    if (photoContainer && profilePic && overlay && cv) {
+
+        photoContainer.addEventListener("click", () => {
+
+            overlay.classList.add("hidden"); // Fade out the words
+            profilePic.classList.add("hidden"); // Fade out the image
+
+            setTimeout(() => {
+
+                photoContainer.style.display = "none"; // Hide the entire container
+                cv.style.display = "block"; // Show the CV
+
+            }, 500); // Wait for fade-out before hiding
         });
-    });
+    }
 
-    // Show CV when clicking profile image
-    profileImage.addEventListener("click", function () {
-        if (cvContainer.style.display === 'none' || cvContainer.style.display === '') {
-            cvContainer.style.display = 'block';
-            profileImage.style.display = 'none';
-        }
-    });
 });
-
-

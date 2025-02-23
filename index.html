@@ -1,43 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web CV</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Mainpage</a></li>
-                <li><a href="work.html">Work History</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blogi.html">Blogikeskustelu</a></li>
-            </ul>
-        </nav>
-    </header>
+<!DOCTYPE html> 
 
-    <main class="mainpage">
-        <div class="main-content">
-            <img id="profile-image" src="profile.jpg" alt="Profile Picture" onclick="toggleContent()">
-            <div class="text-overlay">
-                <span class="tag" onclick="hideText()">luetettava</span>
-                <span class="tag" onclick="hideText()">tarkka</span>
-                <span class="tag" onclick="hideText()">oma-aloitteinen</span>
-            </div>
-        </div>
-        <div id="cv-container" class="cv-container">
-            <iframe src="https://drive.google.com/file/d/1fnVswo23yz4p6Ttlg0rqgYzogfOBdwL_/preview" width="100%" height="100%"></iframe>
-        </div>
-    </main>
+<html lang="fi"> 
 
-    <footer>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/medard-sz%C3%B6ll%C3%B6si-358a541a1/" target="_blank">LinkedIn</a></p>
-    </footer>
+<head> 
 
-    <script src="script.js"></script>
-</body>
+    <meta charset="UTF-8"> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>Medard Szöllösi - CV</title> 
+
+    <link rel="stylesheet" href="styles.css"> 
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
+
+    <script defer src="script.js"></script> 
+
+</head> 
+
+<body> 
+
+    <header> 
+
+        <h1>Medard Szöllösi</h1> 
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div> 
+
+        <nav id="menu"> 
+
+            <a href="work.html">Työkokemus
+
+            <a href="portfolio.html">Portfolio</a> 
+
+        </nav> 
+
+    </header> 
+
+ 
+
+    <main> 
+
+        <div id="photo-container"> 
+
+            <div id="overlay"> 
+
+                <p class="overlay-text">Ahkeruus</p> 
+
+                <p class="overlay-text">Tarkka</p> 
+
+                <p class="overlay-text">Luotettavap</p> 
+
+            </div> 
+
+            <img id="profile-pic" src="profile.jpg" alt="Profile Picture"> 
+
+        </div> 
+
+        <iframe id="cv"  
+
+    src="https://drive.google.com/file/d/1fnVswo23yz4p6Ttlg0rqgYzogfOBdwL_/preview"> 
+
+</iframe> 
+
+ 
+
+    </main> 
+
+ 
+
+    <footer> 
+
+        <p>&copy; 2025 Medard Szöllösi</p> 
+
+        <a class="linkedin-btn" href="https://www.linkedin.com/in/medard-sz%C3%B6ll%C3%B6si-358a541a1/" target="_blank">LinkedIn</a> 
+
+    </footer> 
+
+</body> 
 </html>
+
+
+
 
