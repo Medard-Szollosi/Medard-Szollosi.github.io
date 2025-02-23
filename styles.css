@@ -15,8 +15,8 @@ header, footer {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    position: relative; /* Important for positioning */
-    z-index: 10; /* Ensure header/footer are above other content */
+    position: relative; /* Ensures proper stacking */
+    z-index: 10; /* Ensures header/footer stay above content */
 }
 
 .menu-toggle {
@@ -77,16 +77,15 @@ main {
 #photo-container {
     position: relative;
     display: inline-block;
-    cursor: pointer; /* Indicates it's clickable */
-    z-index: 5; /* Ensures it is below the overlay */
+    cursor: pointer;
 }
 
 #profile-pic {
     width: 200px;
     height: auto;
     border-radius: 50%;
-    display: none; /* Initially hidden until overlay is clicked */
-    z-index: 2; /* Ensure it appears above other content */
+    display: none; /* Initially hidden */
+    z-index: 2; /* Ensure the profile picture appears above content */
 }
 
 #overlay {
@@ -105,7 +104,7 @@ main {
     font-size: 18px;
     font-weight: bold;
     opacity: 1;
-    z-index: 3; /* Overlay should be above the image */
+    z-index: 5; /* Overlay should appear above the image */
     transition: opacity 0.5s ease-out;
 }
 

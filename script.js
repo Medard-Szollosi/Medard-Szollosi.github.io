@@ -8,31 +8,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById("overlay");
     const cv = document.getElementById("cv");
 
-    let overlayClicked = false; // Track if the first click on overlay happened
+    let overlayClicked = false; // Track if the overlay was clicked
 
     if (photoContainer && profilePic && overlay && cv) {
         // Handle the first click (on the overlay)
         overlay.addEventListener("click", () => {
             if (!overlayClicked) {
-                // First click: Hide the overlay, reveal the picture
+                // First click: Hide the overlay and show the picture
                 overlay.classList.add("hidden"); // Hide the overlay
                 profilePic.classList.remove("hidden"); // Show the profile picture
-                overlayClicked = true; // Mark that overlay has been clicked
+                overlayClicked = true; // Mark overlay as clicked
             }
         });
 
-        // Handle the second click (on the picture itself)
+        // Handle the second click (on the profile picture)
         profilePic.addEventListener("click", () => {
             if (overlayClicked) {
-                // Second click: Hide the picture and show CV
+                // Second click: Hide the profile picture and show the CV
                 profilePic.classList.add("hidden");
                 setTimeout(() => {
-                    photoContainer.style.display = "none"; // Hide container
-                    cv.style.display = "block"; // Show CV
+                    photoContainer.style.display = "none"; // Hide the container
+                    cv.style.display = "block"; // Show the CV
                 }, 500);
             }
         });
     }
 });
-
-
