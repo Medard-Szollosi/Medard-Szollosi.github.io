@@ -24,6 +24,7 @@ header, footer {
     justify-content: space-between;
     padding: 0 15px;
     font-size: 18px;
+    position: relative;
 }
 
 /* LinkedIn button */
@@ -39,6 +40,9 @@ footer a {
     cursor: pointer;
     color: white;
     display: block;
+    position: absolute;
+    left: 15px;
+    top: 15px;
 }
 
 /* Navbar */
@@ -46,6 +50,7 @@ footer a {
     position: relative;
 }
 
+/* Hide menu by default on mobile */
 .navbar ul {
     display: none;
     list-style: none;
@@ -58,10 +63,12 @@ footer a {
     text-align: center;
 }
 
+/* When active, show the menu */
 .navbar ul.active {
     display: flex;
 }
 
+/* Styling for menu items */
 .navbar ul li {
     padding: 10px;
 }
@@ -72,7 +79,7 @@ footer a {
     font-size: 18px;
 }
 
-/* On larger screens, show the menu */
+/* On larger screens, always show the menu */
 @media screen and (min-width: 768px) {
     .navbar ul {
         display: flex !important;
@@ -88,51 +95,4 @@ footer a {
     .navbar ul li {
         margin: 0 15px;
     }
-}
-
-/* Profile Image Section */
-#profile-container {
-    position: relative;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-/* Profile Image - Hidden until words disappear */
-#profile-image {
-    width: 80%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 50%;
-    cursor: pointer;
-    pointer-events: none;  /* Prevent clicking before words disappear */
-}
-
-/* Text Overlay on Profile Image */
-.text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.text-overlay .tag {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
-    padding: 5px 10px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* CV Container - Hidden by default */
-#cv-container {
-    display: none;
-    width: 100%;
-    max-width: 600px;
-    height: 500px;
-    margin: 20px auto;
 }
