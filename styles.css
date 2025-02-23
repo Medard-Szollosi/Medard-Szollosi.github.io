@@ -12,13 +12,14 @@ body {
     color: white;
     text-align: center;
     line-height: 1.6;
+    position: relative;
 }
 
 /* Header & Footer */
 header, footer {
     background-color: black;
     color: white;
-    height: 60px;  /* Fixed height */
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,76 +34,47 @@ footer a {
     font-weight: bold;
 }
 
-/* Navigation styles */
-.navbar {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-/* Hamburger Menu */
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    display: block;
-    color: white;
-}
-
-/* Nav links */
-.navbar ul {
-    display: none;  /* Initially hidden on mobile */
-    list-style: none;
-    flex-direction: column;
-    background: black;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.navbar ul.active {
-    display: flex;
-}
-
-.navbar ul li {
-    padding: 10px;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* Make sure nav is always visible on larger screens */
-@media screen and (min-width: 768px) {
-    .navbar ul {
-        display: flex !important;
-        flex-direction: row;
-        position: static;
-        width: auto;
-    }
-
-    .menu-icon {
-        display: none;
-    }
-
-    .navbar ul li {
-        margin: 0 15px;
-    }
-}
-
 /* Profile Image */
+#profile-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
 #profile-image {
     width: 80%;
-    max-width: 200px;  /* Adjusted for proper sizing */
+    max-width: 200px;  /* Keeps the image small */
     height: auto;
     border-radius: 50%;
-    margin-top: 20px;
     cursor: pointer;
 }
 
 /* Word overlay on profile image */
 .text-overlay {
-    position: 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.text-overlay .tag {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* CV container - Hidden by default */
+#cv-container {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    margin: 20px auto;
+}
