@@ -71,3 +71,42 @@ main {
 .linkedin-btn:hover {
     background: gray;
 }
+#photo-container {
+    position: relative;
+    display: inline-block;
+}
+
+#profile-pic {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 1; /* Start visible */
+    transition: opacity 0.5s ease-out;
+}
+
+.overlay-text {
+    margin: 5px 0;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none; /* Prevents interactions after fading out */
+}
