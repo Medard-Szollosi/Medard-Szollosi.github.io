@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Mainpage</a></li>
+                <li><a href="work_history.html">Work History</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blogikeskustelu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="portfolio">
+            <div class="portfolio-item" onclick="toggleFlip('ios')">
+                <img src="ios.png" alt="iOS" id="ios">
+                <div class="text" id="ios-text">mobiililaiteasennukset</div>
+            </div>
+            <div class="portfolio-item" onclick="toggleFlip('laptop')">
+                <img src="laptop.png" alt="Laptop" id="laptop">
+                <div class="text" id="laptop-text">mobiililaiteasennukset</div>
+            </div>
+            <div class="portfolio-item" onclick="toggleFlip('palomuuri')">
+                <img src="palomuuri.png" alt="Firewall" id="palomuuri">
+                <div class="text" id="palomuuri-text">mobiililaiteasennukset</div>
+            </div>
+            <div class="portfolio-item" onclick="toggleFlip('server')">
+                <img src="server.png" alt="Server" id="server">
+                <div class="text" id="server-text">mobiililaiteasennukset</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/medard-sz%C3%B6ll%C3%B6si-358a541a1/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
