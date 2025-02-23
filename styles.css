@@ -74,7 +74,7 @@ main {
 #photo-container {
     position: relative;
     display: inline-block;
-    cursor: pointer; /* Makes it clear it's clickable */
+    cursor: pointer; /* Indicates it's clickable */
 }
 
 #profile-pic {
